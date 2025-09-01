@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Base Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1f26;
+    font-family: 'Inter', sans-serif;
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+/* Title */
+p:first-of-type {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00bfa6;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+button {
+    background-color: #2a2f3a;
+    border: 2px solid #00bfa6;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 191, 166, 0.1);
+    color: #d3d3d3;
+}
+
+button:hover {
+    background-color: #26c6da;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Move Images */
+.move-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: brightness(1.05);
+}
+
+button:hover .move-image {
+    transform: scale(1.1);
+    filter: brightness(0.85);
+}
+/* Flex container for move buttons */
+.move-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Optional: wraps on small screens */
+    margin-bottom: 30px;
+}
+.move-container button {
+    background-color: #2a2f3a !important; /* dark consistent background */
+    border: 2px solid #00bfa6;
+    border-radius: 12px;
+    padding: 12px;
+    width: 90px;
+    height: 90px;
+    font-size: 36px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+.move-container button:hover {
+    background-color: #00bfa6;
+    color: #000;
+    transform: scale(1.1);
+}
+.move-container button:hover .move-image {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+
+/* Result */
+.js-result {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ff6f61;
+}
+
+/* Moves Text Styling */
+.js-moves {
+    font-size: 18px;
+    margin-top: 25px;
+    color: #00bfa6;
+    background-color: #263238;
+    padding: 14px 22px;
+    border-radius: 10px;
+    border: 1px solid #37474f;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Highlight player and computer moves */
+.js-moves strong {
+    color: #00bfa6;
+    font-weight: 600;
+}
+
+
+/* Score Display */
+.js-score {
+    font-size: 18px;
+    background-color: #2e3542;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #00bfa6;
+    margin-top: 15px;
+    color: #c8e6c9;
+}
+
+/* Reset Button */
+button:last-of-type {
+    margin-top: 20px;
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+    color: white;
+}
+
+button:last-of-type:hover {
+    background-color: #e53935;
+}
+/* Animation for appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
